@@ -4,3 +4,4 @@ This project aims to design an efficient and practical set of tools for detectio
 # Frameworks
 1. YOLO v8 - Object Detection & Classification
 2. Pygame - Virtual Simulation & Testing
+3. supervision and bytetracking
