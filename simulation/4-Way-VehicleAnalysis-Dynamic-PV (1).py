@@ -221,7 +221,7 @@ directionNumbers = {0: 'right', 1: 'down', 2: 'left', 3: 'up'}
 pygame.init()
 simulation = pygame.sprite.Group()
 pygame.mixer.init()
-sound_file = "simulation\\images\\ambulance-siren.mp3"
+sound_file = "..\\simulation\\images\\ambulance-siren.mp3"
 pygame.mixer.music.load(sound_file)
 
 # In[10]:
@@ -275,7 +275,7 @@ class Vehicle(pygame.sprite.Sprite):
         self.rotateAngle = 0
         vehicles[direction][lane].append(self)
         self.index = len(vehicles[direction][lane]) - 1
-        path = "simulation\\images\\" + direction + "\\" + vehicleClass + ".png"
+        path = "..\\simulation\\images\\" + direction + "\\" + vehicleClass + ".png"
         self.originalImage = pygame.image.load(path)
         self.currentImage = pygame.image.load(path)
 
@@ -1955,18 +1955,18 @@ class Main:
     screenSize = (screenWidth, screenHeight)
 
     # Setting background image i.e. image of intersection
-    background = pygame.image.load('simulation\\images\\intersection\\intersection-4-Way.png')
+    background = pygame.image.load('..\\simulation\\images\\intersection\\intersection-4-Way.png')
 
     screen = pygame.display.set_mode(screenSize, pygame.RESIZABLE)
     pygame.display.set_caption("TRAFFIC SIMULATION")
 
-    icon = pygame.image.load('simulation\\images\\Icons\\rush.png')
+    icon = pygame.image.load('..\\simulation\\images\\Icons\\rush.png')
     pygame.display.set_icon(icon)
 
     # Loading signal images and font
-    redSignal = pygame.image.load('simulation\\images\\signals\\red.png')
-    yellowSignal = pygame.image.load('simulation\\images\\signals\\yellow.png')
-    greenSignal = pygame.image.load('simulation\\images\\signals\\green.png')
+    redSignal = pygame.image.load('..\\simulation\\images\\signals\\red.png')
+    yellowSignal = pygame.image.load('..\\simulation\\images\\signals\\yellow.png')
+    greenSignal = pygame.image.load('..\\simulation\\images\\signals\\green.png')
     font = pygame.font.Font(None, 30)
 
     thread3 = threading.Thread(
